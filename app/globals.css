@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F4F2EB;
+  color: #14100F;
+  text-wrap: pretty;
+}
+
+@layer components {
+  .container-page {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (min-width: 768px) {
+    .container-page {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+  }
+
+  /* Etiqueta Space Mono en mayúsculas — el recurso tipográfico que más se
+     repite en el sistema (eyebrows, botones, pies de foto). */
+  .label {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    word-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 768px) {
+    .label {
+      font-size: 12px;
+      letter-spacing: 0.22em;
+    }
+  }
+
+  /* Frase manuscrita en serif itálica, levemente rotada. */
+  .aside-serif {
+    font-family: var(--font-display), Georgia, serif;
+    font-style: italic;
+    line-height: 1;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 26px;
+    border-radius: 0;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    word-spacing: 0.28em;
+    text-transform: uppercase;
+    transition: background-color 0.18s ease, color 0.18s ease;
+  }
+  @media (min-width: 768px) {
+    .btn {
+      padding: 17px 30px;
+      font-size: 13px;
+    }
+  }
+  .btn-ink {
+    background-color: #14100F;
+    color: #F4F2EB;
+  }
+  .btn-ink:hover {
+    background-color: #4A0F0E;
+  }
+  .btn-paper {
+    background-color: #F4F2EB;
+    color: #14100F;
+  }
+  .btn-paper:hover {
+    background-color: #C7C64B;
+  }
+  .btn-outline-ink {
+    border: 2px solid #14100F;
+    color: #14100F;
+  }
+  .btn-outline-ink:hover {
+    background-color: #14100F;
+    color: #F4F2EB;
+  }
+  .btn-outline-paper {
+    border: 2px solid rgba(244, 242, 235, 0.65);
+    color: #F4F2EB;
+  }
+  .btn-outline-paper:hover {
+    background-color: #F4F2EB;
+    color: #14100F;
+  }
+
+  .field-line {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #14100F;
+    padding: 12px 2px;
+    font-size: 16px;
+    color: #14100F;
+  }
+  .field-line::placeholder {
+    color: #7A6157;
+  }
+  .field-line:focus {
+    outline: none;
+    border-bottom-color: #4A0F0E;
+  }
+}
+
+/* Trazado progresivo de las rutas del mapa Argentina ↔ Europa. */
+@keyframes twDraw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Cross-fade del carrusel de fotos: 9 slides sobre un ciclo de 18s. Cada
+   una entra, se sostiene ~1.3s y sale, con 2s de desfase entre slides. */
+@keyframes twSlide {
+  0% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  1.24% {
+    opacity: 1;
+  }
+  8.53% {
+    opacity: 1;
+  }
+  9.78% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  [style*='twSlide'],
+  [style*='twDraw'] {
+    animation: none !important;
+  }
+  [style*='twSlide'] {
+    opacity: 1 !important;
+  }
+}
