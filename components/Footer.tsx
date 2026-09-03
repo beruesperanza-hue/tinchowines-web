@@ -5,11 +5,9 @@ import type { Locale } from '@/lib/i18n';
 
 export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const nav = [
-    { href: `/${lang}#mapa`, label: dict.nav.ruta },
-    { href: `/${lang}#regiones`, label: dict.nav.regiones },
     { href: `/${lang}#bodegas`, label: dict.nav.bodegas },
     { href: `/${lang}/restaurantes`, label: dict.nav.restaurantes },
-    { href: `/${lang}#club`, label: dict.nav.club },
+    { href: `/${lang}/ruta`, label: dict.nav.ruta },
     { href: `/${lang}#contacto`, label: dict.nav.contacto },
   ];
 

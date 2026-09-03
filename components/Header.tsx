@@ -11,13 +11,10 @@ export default function Header({ lang, dict }: { lang: Locale; dict: Dictionary 
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // La home es un long-scroll: la nav apunta a anclas dentro de /[lang].
   const nav = [
-    { href: `/${lang}#mapa`, label: dict.nav.ruta },
-    { href: `/${lang}#regiones`, label: dict.nav.regiones },
     { href: `/${lang}#bodegas`, label: dict.nav.bodegas },
     { href: `/${lang}/restaurantes`, label: dict.nav.restaurantes },
-    { href: `/${lang}#club`, label: dict.nav.club },
+    { href: `/${lang}/ruta`, label: dict.nav.ruta },
   ];
 
   const otherLang: Locale = lang === 'en' ? 'es' : 'en';
