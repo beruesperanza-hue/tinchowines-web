@@ -43,7 +43,7 @@ export default function Hero({ lang, dict }: { lang: Locale; dict: Dictionary })
             >
               {t.ctaPrimary}
             </a>
-            <Link href={`/${lang}#mapa`} className="btn btn-outline-paper">
+            <Link href={`/${lang}/ruta`} className="btn btn-outline-paper">
               {t.ctaSecondary}
             </Link>
           </div>
