@@ -1,8 +1,25 @@
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import WorldRouteMap from '@/components/maps/WorldRouteMap';
 import AllRegionsMap from '@/components/maps/AllRegionsMap';
 import { getDictionary } from '@/lib/dictionaries';
 import { isLocale, type Locale } from '@/lib/i18n';
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const l = lang as Locale;
+
+  const title = l === 'es' ? 'La ruta del vino · Tincho Wines' : 'The wine route · Tincho Wines';
+  const description = l === 'es'
+    ? 'De Argentina a Europa sin intermediarios. Descubre el recorrido de nuestros vinos.'
+    : 'From Argentina to Europe without middlemen. Discover the journey of our wines.';
+
+  return {
+    title,
+    description,
+  };
+}
 
 export default async function RutaPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
