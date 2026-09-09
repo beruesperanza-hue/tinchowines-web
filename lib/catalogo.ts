@@ -59,7 +59,7 @@ export const BODEGAS: Bodega[] = [
         tipo: 'tinto',
         variedad: 'Malbec',
         precioHosteleria: 13.8,
-        imagenReferencia: '/images/botellas/bousquet-malbec-reserva.png',
+        imagenReferencia: '/images/botellas/bousquet-malbec-reserva.jpeg',
       },
       { nombre: 'Pinot Noir Reserva', tipo: 'tinto', variedad: 'Pinot Noir', precioHosteleria: 13.8 },
       {
@@ -81,7 +81,13 @@ export const BODEGAS: Bodega[] = [
     region: 'Mendoza',
     logo: '/images/logos/casa-de-uco.jpeg',
     vinos: [
-      { nombre: 'El Salvaje Orgánico', tipo: 'tinto', variedad: 'Malbec', precioHosteleria: 13.9 },
+      {
+        nombre: 'El Salvaje Orgánico',
+        tipo: 'tinto',
+        variedad: 'Malbec',
+        precioHosteleria: 13.9,
+        imagenReferencia: '/images/botellas/casadeuco-el-salvaje.png',
+      },
       { nombre: 'Vineyard Selection Malbec', tipo: 'tinto', variedad: 'Malbec', precioHosteleria: 19.5 },
       {
         nombre: 'Vineyard Selection Petit Verdot',
@@ -100,22 +106,39 @@ export const BODEGAS: Bodega[] = [
     ],
   },
   {
-    slug: 'finca-los-maza',
-    nombre: 'Finca Los Maza',
-    zona: 'Valle de Uco',
+    slug: 'familia-furlan',
+    nombre: 'Familia Furlán',
+    zona: 'Altamira · Valle de Uco',
     region: 'Mendoza',
-    logo: '/images/logos/finca-los-maza.jpeg',
+    logo: '/images/logos/familia-furlan.jpeg',
     vinos: [
-      { nombre: 'Línea Mapa Roble', tipo: 'tinto', variedad: 'Malbec', precioHosteleria: 11.6 },
-      { nombre: 'Línea Mapa Reserva', tipo: 'tinto', variedad: 'Malbec', precioHosteleria: 16.6 },
-      { nombre: 'M10 Malbec', tipo: 'tinto', variedad: 'Malbec', precioHosteleria: 9.9 },
-      { nombre: 'M10 Torrontés', tipo: 'blanco', variedad: 'Torrontés', precioHosteleria: 9.9 },
       {
-        nombre: 'Oso Hormiguero Malbec',
+        nombre: 'Malbec',
         tipo: 'tinto',
         variedad: 'Malbec',
-        precioHosteleria: 15.5,
-        nota: '91 puntos Suckling',
+        precioHosteleria: 10.5,
+        imagenReferencia: '/images/botellas/furlan-malbec.png',
+      },
+      {
+        nombre: 'Torrontés Semillón',
+        tipo: 'blanco',
+        variedad: 'Blend',
+        precioHosteleria: 9.8,
+        imagenReferencia: '/images/botellas/furlan-torrontes-semillon.png',
+      },
+      {
+        nombre: 'Reserva Malbec',
+        tipo: 'tinto',
+        variedad: 'Malbec',
+        precioHosteleria: 14.5,
+        imagenReferencia: '/images/botellas/furlan-reserva-malbec.png',
+      },
+      {
+        nombre: 'Gran Reserva Malbec',
+        tipo: 'tinto',
+        variedad: 'Malbec',
+        precioHosteleria: 18.9,
+        imagenReferencia: '/images/botellas/furlan-gran-reserva-malbec.png',
       },
     ],
   },
@@ -163,7 +186,13 @@ export const BODEGAS: Bodega[] = [
     region: 'La Rioja',
     logo: '/images/logos/valle-de-la-puerta.jpg',
     vinos: [
-      { nombre: 'Malbec Clásico', tipo: 'tinto', variedad: 'Malbec', precioHosteleria: 6.9 },
+      {
+        nombre: 'Malbec Clásico',
+        tipo: 'tinto',
+        variedad: 'Malbec',
+        precioHosteleria: 6.9,
+        imagenReferencia: '/images/botellas/valle-de-la-puerta-malbec-clasico.png',
+      },
       { nombre: 'Torrontés Clásico', tipo: 'blanco', variedad: 'Torrontés', precioHosteleria: 6.9 },
     ],
   },
@@ -185,14 +214,18 @@ export const BOTELLAS_DESTACADAS: { vino: string; bodega: string; imagenReferenc
   {
     vino: 'Malbec Reserva',
     bodega: 'Domaine Bousquet',
-    imagenReferencia: '/images/botellas/bousquet-malbec-reserva.png',
+    imagenReferencia: '/images/botellas/bousquet-malbec-reserva.jpeg',
   },
   {
     vino: 'Gran Malbec Reserva',
     bodega: 'Domaine Bousquet',
     imagenReferencia: '/images/botellas/bousquet-gran-malbec.png',
   },
-  { vino: 'El Salvaje Orgánico', bodega: 'Casa de Uco' },
+  {
+    vino: 'El Salvaje Orgánico',
+    bodega: 'Casa de Uco',
+    imagenReferencia: '/images/botellas/casadeuco-el-salvaje.png',
+  },
   {
     vino: 'Vineyard Selection Petit Verdot',
     bodega: 'Casa de Uco',
@@ -218,7 +251,19 @@ export const BOTELLAS_DESTACADAS: { vino: string; bodega: string; imagenReferenc
     bodega: 'Familia Schroeder',
     imagenReferencia: '/images/botellas/schroeder-saurus-select-pinot-noir.jpg',
   },
-  { vino: 'Línea Mapa Reserva', bodega: 'Finca Los Maza' },
-  { vino: 'Oso Hormiguero Malbec', bodega: '91 pts Suckling · Los Maza' },
-  { vino: 'Malbec Clásico', bodega: 'Valle de la Puerta' },
+  {
+    vino: 'Reserva Malbec',
+    bodega: 'Familia Furlán',
+    imagenReferencia: '/images/botellas/furlan-reserva-malbec.png',
+  },
+  {
+    vino: 'Gran Reserva Malbec',
+    bodega: 'Familia Furlán',
+    imagenReferencia: '/images/botellas/furlan-gran-reserva-malbec.png',
+  },
+  {
+    vino: 'Malbec Clásico',
+    bodega: 'Valle de la Puerta',
+    imagenReferencia: '/images/botellas/valle-de-la-puerta-malbec-clasico.png',
+  },
 ];
