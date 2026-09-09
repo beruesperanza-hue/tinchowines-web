@@ -6,7 +6,9 @@ import type { Dictionary } from '@/lib/dictionaries';
 
 const MARTIN_FOTOS = [
   '/images/martin-bodega.jpg',
-  // Agregar más fotos según sea necesario
+  '/images/martin-vinexpo-paris.png',
+  '/images/martin-cata-wine-of-chile.png',
+  '/images/martin-vinedo.png',
 ];
 
 export default function Martin({ dict }: { dict: Dictionary }) {
