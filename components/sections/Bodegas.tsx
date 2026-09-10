@@ -51,15 +51,15 @@ export default function Bodegas({ dict }: { dict: Dictionary }) {
       </div>
 
       <div className="container-page">
-        <div className="mt-12 grid gap-0.5 border-2 border-ink bg-ink sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-12 grid gap-0.5 border-2 border-ink bg-ink sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {BODEGAS.map((b) => (
-            <div key={b.slug} className="flex flex-col gap-3.5 bg-paper px-5 pb-7 pt-6">
+            <div key={b.slug} className="flex flex-col gap-2.5 bg-paper px-4 pb-6 pt-5">
               {/* Logo real cuando está (Martín los fue mandando); si no,
                   casillero con el nombre. Fondo blanco liso salvo el de
                   Familia Schroeder, que es blanco-sobre-oscuro y necesita la
                   tarjeta invertida para leerse. */}
               <div
-                className={`relative flex h-[150px] items-center justify-center border-2 border-ink px-4 md:h-[168px] ${
+                className={`relative flex h-[110px] items-center justify-center border-2 border-ink px-3 md:h-[128px] ${
                   b.logoFondo === 'oscuro' ? 'bg-ink' : 'bg-white'
                 }`}
               >
@@ -68,25 +68,25 @@ export default function Bodegas({ dict }: { dict: Dictionary }) {
                     src={b.logo}
                     alt={`Logo de ${b.nombre}`}
                     fill
-                    sizes="(min-width: 1024px) 20vw, 50vw"
+                    sizes="(min-width: 1280px) 16vw, (min-width: 1024px) 33vw, 50vw"
                     // El de fondo oscuro (Schroeder) no es un recorte
                     // transparente: es un rectángulo gris oscuro sólido. Con
                     // padding se nota como una caja flotante; a sangre
                     // (object-cover, sin margen) su gris se pierde contra la
                     // tarjeta #14100F, que es casi el mismo tono.
-                    className={b.logoFondo === 'oscuro' ? 'object-cover' : 'object-contain p-5'}
+                    className={b.logoFondo === 'oscuro' ? 'object-cover' : 'object-contain p-4'}
                   />
                 ) : (
                   <span className="label text-center text-base text-label/60 md:text-lg">{b.nombre}</span>
                 )}
               </div>
-              <h3 className="text-[22px] font-extrabold leading-tight tracking-[-0.02em] [overflow-wrap:anywhere]">
+              <h3 className="text-[17px] font-extrabold leading-tight tracking-[-0.02em] [overflow-wrap:anywhere]">
                 {b.nombre}
               </h3>
-              <p className="font-mono text-[10px] font-bold uppercase tracking-[.18em] [word-spacing:.28em] text-label">
+              <p className="font-mono text-[9px] font-bold uppercase tracking-[.16em] [word-spacing:.24em] text-label">
                 {b.zona}
               </p>
-              <p className="text-sm leading-relaxed text-prose">{t.descripciones[b.slug]}</p>
+              <p className="text-xs leading-relaxed text-prose">{t.descripciones[b.slug]}</p>
             </div>
           ))}
         </div>
