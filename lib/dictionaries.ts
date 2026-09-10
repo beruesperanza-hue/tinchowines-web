@@ -53,12 +53,12 @@ const es = {
   },
   franja: {
     frase: 'Elegido en la bodega, no en un catálogo',
-    dato: '5 bodegas · 15 años de viñedos recorridos',
+    dato: '6 bodegas · 15 años de viñedos recorridos',
   },
   cifras: [
     { valor: '15 años', pie: 'recorriendo bodegas argentinas' },
-    { valor: '5 bodegas', pie: 'Mendoza · Patagonia · La Rioja' },
-    { valor: '27 etiquetas', pie: 'en la selección 2025' },
+    { valor: '6 bodegas', pie: 'Mendoza · Patagonia · La Rioja' },
+    { valor: '32 etiquetas', pie: 'en la selección 2025' },
     { valor: 'Valencia', pie: 'base para España y Europa' },
   ],
   mapa: {
@@ -105,8 +105,8 @@ const es = {
   },
   bodegas: {
     eyebrow: "La seleccion 2025",
-    title: "Cinco bodegas, una seleccion.",
-    intro: "Domaine Bousquet, Casa de Uco, Familia Furlan, Familia Schroeder y Valle de la Puerta. Compra directa a bodega, precios de hosteleria a pedido.",
+    title: "Seis bodegas, una seleccion.",
+    intro: "Domaine Bousquet, Casa de Uco, Familia Furlan, Familia Schroeder, Bodega Gieco y Valle de la Puerta. Compra directa a bodega, precios de hosteleria a pedido.",
     botellasTitulo: "Las botellas, una por una",
     pie: "precios de hosteleria 2025 - a pedido",
     descripciones: {
@@ -114,6 +114,7 @@ const es = {
       "casa-de-uco": "El Salvaje organico, Vineyard Selection en Malbec y Petit Verdot, y el Winemakers Blend de guarda.",
       "familia-furlan": "Malbec, Torrontes Semillon, Reserva Malbec y Gran Reserva Malbec. Quince anos de seleccion directa en bodega.",
       "familia-schroeder": "La familia Saurus completa: clasicos, Select, Barrel Fermented en tres variedades y el Tardio de Pinot Noir.",
+      "bodega-gieco": "Single Vineyard y Special Selection en Malbec, Cabernet Franc, Petit Verdot y Tannat, desde Lujan de Cuyo.",
       "valle-de-la-puerta": "Los dos clasicos riojanos de entrada: Malbec y Torrontes, la mejor relacion precio-calidad de la carta.",
     } as Record<string, string>,
   },
@@ -244,12 +245,12 @@ const en: typeof es = {
   },
   franja: {
     frase: 'Chosen at the winery, not from a catalogue',
-    dato: '5 wineries · 15 years walking vineyards',
+    dato: '6 wineries · 15 years walking vineyards',
   },
   cifras: [
     { valor: '15 years', pie: 'visiting Argentine wineries' },
-    { valor: '5 wineries', pie: 'Mendoza · Patagonia · La Rioja' },
-    { valor: '27 labels', pie: 'in the 2025 selection' },
+    { valor: '6 wineries', pie: 'Mendoza · Patagonia · La Rioja' },
+    { valor: '32 labels', pie: 'in the 2025 selection' },
     { valor: 'Valencia', pie: 'base for Spain and Europe' },
   ],
   mapa: {
@@ -293,8 +294,8 @@ const en: typeof es = {
   },
   bodegas: {
     eyebrow: "The 2025 selection",
-    title: "Five wineries, one selection.",
-    intro: "Domaine Bousquet, Casa de Uco, Familia Furlan, Familia Schroeder and Valle de la Puerta. Bought direct from the winery; trade prices on request.",
+    title: "Six wineries, one selection.",
+    intro: "Domaine Bousquet, Casa de Uco, Familia Furlan, Familia Schroeder, Bodega Gieco and Valle de la Puerta. Bought direct from the winery; trade prices on request.",
     botellasTitulo: "The bottles, one by one",
     pie: "2025 trade prices - on request",
     descripciones: {
@@ -302,6 +303,7 @@ const en: typeof es = {
       "casa-de-uco": "El Salvaje organic, Vineyard Selection in Malbec and Petit Verdot, and the age-worthy Winemakers Blend.",
       "familia-furlan": "Malbec, Torrontes Semillon, Reserva Malbec and Gran Reserva Malbec. Fifteen years of direct sourcing from the highest-altitude vineyards.",
       "familia-schroeder": "The full Saurus family: classics, Select, Barrel Fermented in three varieties and the Pinot Noir Tardio.",
+      "bodega-gieco": "Single Vineyard and Special Selection in Malbec, Cabernet Franc, Petit Verdot and Tannat, from Lujan de Cuyo.",
       "valle-de-la-puerta": "The two Riojan entry classics: Malbec and Torrontes, the best value on the list.",
     } as Record<string, string>,
   },

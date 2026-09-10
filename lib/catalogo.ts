@@ -1,4 +1,4 @@
-// Catálogo real 2025 de Tincho Wines — 5 bodegas, 27 referencias.
+// Catálogo real 2025 de Tincho Wines — 6 bodegas, 32 referencias.
 // Fuente: "Vinos Tincho Wines 2025_VALENCIA_HOSTELERIA.pdf" y
 // "Tincho_Wines_Botellas_y_Logos_Referencia.pdf" (ver ../rediseno-ref/uploads/).
 // NO inventar entradas acá: si un vino no está en esos PDFs, no va.
@@ -147,8 +147,7 @@ export const BODEGAS: Bodega[] = [
     nombre: 'Familia Schroeder',
     zona: 'Neuquén',
     region: 'Patagonia',
-    logo: '/images/logos/familia-schroeder.avif',
-    logoFondo: 'oscuro',
+    logo: '/images/logos/familia-schroeder.png',
     vinos: [
       { nombre: 'Saurus Malbec', tipo: 'tinto', variedad: 'Malbec', precioHosteleria: 7.5 },
       { nombre: 'Saurus Rosé', tipo: 'rosado', variedad: 'Pinot Noir', precioHosteleria: 7.5 },
@@ -177,6 +176,20 @@ export const BODEGAS: Bodega[] = [
       { nombre: 'Barrel Fermented Cabernet Franc', tipo: 'tinto', variedad: 'Cabernet Franc', precioHosteleria: 15.0 },
       { nombre: 'Barrel Fermented Malbec', tipo: 'tinto', variedad: 'Malbec', precioHosteleria: 15.0 },
       { nombre: 'Tardío Pinot Noir', tipo: 'tinto', variedad: 'Pinot Noir', precioHosteleria: 12.0 },
+    ],
+  },
+  {
+    slug: 'bodega-gieco',
+    nombre: 'Bodega Gieco',
+    zona: 'Luján de Cuyo',
+    region: 'Mendoza',
+    logo: '/images/logos/bodega-gieco.png',
+    vinos: [
+      { nombre: 'Malbec Single Vineyard', tipo: 'tinto', variedad: 'Malbec', precioHosteleria: 0 },
+      { nombre: 'Malbec Special Selection', tipo: 'tinto', variedad: 'Malbec', precioHosteleria: 0 },
+      { nombre: 'Cabernet Franc Special Selection', tipo: 'tinto', variedad: 'Cabernet Franc', precioHosteleria: 0 },
+      { nombre: 'Petit Verdot Special Selection', tipo: 'tinto', variedad: 'Petit Verdot', precioHosteleria: 0 },
+      { nombre: 'Tannat Special Selection', tipo: 'tinto', variedad: 'Tannat', precioHosteleria: 0 },
     ],
   },
   {
