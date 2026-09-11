@@ -12,8 +12,14 @@ export async function POST(request: NextRequest) {
 
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      // Sin RESEND_API_KEY (ej. en desarrollo local) sólo se loguea, para no
-      // bloquear la prueba del formulario.
+      // En desarrollo se loguea y se da por buena, para no bloquear la prueba
+      // del formulario. En producción NO: devolver ok sin haber enviado nada
+      // hace que el visitante vea "te respondemos en 24h" mientras su consulta
+      // se pierde — que es exactamente lo que pasó hasta 2026-09-11.
+      if (process.env.NODE_ENV === 'production') {
+        console.error('RESEND_API_KEY no configurada: consulta NO enviada', data);
+        return NextResponse.json({ error: 'No se pudo enviar el mensaje' }, { status: 500 });
+      }
       console.log('Consulta de contacto (RESEND_API_KEY no configurada):', data);
       return NextResponse.json({ ok: true });
     }
